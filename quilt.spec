@@ -37,15 +37,14 @@ Dope³nienia basha dla quilt.
 %setup -q
 
 %build
-./configure
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	prefix=/usr \
-	BUILD_ROOT=$RPM_BUILD_ROOT
+%makeinstall \
+	docdir=$RPM_BUILD_ROOT%{_docdir}
 
 %find_lang %{name}
 
