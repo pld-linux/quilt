@@ -1,4 +1,3 @@
-#
 Summary:	Scripts for working with series of patches
 Summary(pl):	Skrypty do pracy z zestawem ³atek
 Name:		quilt
@@ -20,11 +19,6 @@ applied, un-applied, refreshed, etc.
 
 The scripts are heavily based on Andrew Morton's patch scripts
 found at http://www.zip.com.au/~akpm/linux/patches/.
-
-Authors:
---------
-    Andrew Morton <akpm@digeo.com>
-    Andreas Gruenbacher <agruen@suse.de>
 
 %package -n bash-completion-quilt
 Summary:        bash completion for quilt
@@ -48,9 +42,12 @@ Dope³nienia basha dla quilt.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install prefix=/usr \
+
+%{__make} install \
+	prefix=/usr \
 	BUILD_ROOT=$RPM_BUILD_ROOT
-%{find_lang} %{name}
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
