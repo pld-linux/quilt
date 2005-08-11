@@ -4,7 +4,7 @@ Name:		quilt
 Version:	0.42
 Release:	0.1
 Epoch:		0
-License:	GPL
+License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://savannah.nongnu.org/download/quilt/%{name}-%{version}.tar.gz
 # Source0-md5:	c07d43f24f4a473cab4519732647086b
