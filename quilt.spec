@@ -8,17 +8,26 @@ License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://savannah.nongnu.org/download/quilt/%{name}-%{version}.tar.gz
 # Source0-md5:	c07d43f24f4a473cab4519732647086b
-URL:		http://savannah.nongnu.org/projects/quilt
+URL:		http://savannah.nongnu.org/projects/quilt/
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The scripts allow to manage a series of patches by keeping
-track of the changes each patch makes. Patches can be
-applied, un-applied, refreshed, etc.
+The scripts allow to manage a series of patches by keeping track of
+the changes each patch makes. Patches can be applied, un-applied,
+refreshed, etc.
 
 The scripts are heavily based on Andrew Morton's patch scripts
-found at http://www.zip.com.au/~akpm/linux/patches/.
+found at http://www.zip.com.au/~akpm/linux/patches/ .
+
+%description -l pl
+Te skrypty pozwalaj± na zarz±dzanie zestawem ³atek poprzez ¶ledzenie
+zmian czynionych przez ka¿d± ³atkê. £aty mog± byæ nak³adane,
+wycofywane, od¶wie¿ane itp.
+
+Skrypty te s± w du¿ej mierze oparte na skryptach do ³at Andrew
+Mortona, które mo¿na znale¼æ pod adresem
+http://www.zip.com.au/~akpm/linux/patches/ .
 
 %package -n bash-completion-quilt
 Summary:        bash completion for quilt
