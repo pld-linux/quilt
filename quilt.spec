@@ -18,7 +18,7 @@ the changes each patch makes. Patches can be applied, un-applied,
 refreshed, etc.
 
 The scripts are heavily based on Andrew Morton's patch scripts
-found at http://www.zip.com.au/~akpm/linux/patches/ .
+found at <http://www.zip.com.au/~akpm/linux/patches/>.
 
 %description -l pl
 Te skrypty pozwalaj± na zarz±dzanie zestawem ³atek poprzez ¶ledzenie
@@ -27,7 +27,7 @@ wycofywane, od¶wie¿ane itp.
 
 Skrypty te s± w du¿ej mierze oparte na skryptach do ³at Andrew
 Mortona, które mo¿na znale¼æ pod adresem
-http://www.zip.com.au/~akpm/linux/patches/ .
+<http://www.zip.com.au/~akpm/linux/patches/>.
 
 %package -n bash-completion-quilt
 Summary:        bash completion for quilt
