@@ -18,8 +18,8 @@ The scripts allow to manage a series of patches by keeping track of
 the changes each patch makes. Patches can be applied, un-applied,
 refreshed, etc.
 
-The scripts are heavily based on Andrew Morton's patch scripts
-found at <http://www.zip.com.au/~akpm/linux/patches/>.
+The scripts are heavily based on Andrew Morton's patch scripts found
+at <http://www.zip.com.au/~akpm/linux/patches/>.
 
 %description -l pl
 Te skrypty pozwalaj± na zarz±dzanie zestawem ³atek poprzez ¶ledzenie
@@ -31,11 +31,11 @@ Mortona, które mo¿na znale¼æ pod adresem
 <http://www.zip.com.au/~akpm/linux/patches/>.
 
 %package -n bash-completion-quilt
-Summary:        bash completion for quilt
-Summary(pl):    Dope³nienia basha dla quilt
-Group:          Applications/Shells
-Requires:       bash-completion
-Requires:       %{name} = %{version}-%{release}
+Summary:	bash completion for quilt
+Summary(pl):	Dope³nienia basha dla quilt
+Group:		Applications/Shells
+Requires:	%{name} = %{version}-%{release}
+Requires:	bash-completion
 
 %description -n bash-completion-quilt
 Bash completion for quilt.
@@ -53,8 +53,8 @@ Dope³nienia basha dla quilt.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%makeinstall \
-	docdir=$RPM_BUILD_ROOT%{_docdir}
+%{__make} install \
+	BUILD_ROOT=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
@@ -73,4 +73,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n bash-completion-quilt
 %defattr(644,root,root,755)
-/etc/bash_completion.d/%{name}
+%{_sysconfdir}/bash_completion.d/%{name}
