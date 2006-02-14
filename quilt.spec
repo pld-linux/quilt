@@ -1,15 +1,16 @@
 Summary:	Scripts for working with series of patches
 Summary(pl):	Skrypty do pracy z zestawem ³atek
 Name:		quilt
-Version:	0.42
+Version:	0.43
 Release:	0.1
 Epoch:		0
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://savannah.nongnu.org/download/quilt/%{name}-%{version}.tar.gz
-# Source0-md5:	c07d43f24f4a473cab4519732647086b
+# Source0-md5:	a0bed88a3dbc0d2f25659bf9077c2515
 URL:		http://savannah.nongnu.org/projects/quilt/
 BuildRequires:	gettext-devel
+BuildRequires:	perl-tools-pod
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -62,13 +63,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS TODO quilt.changes doc/{quilt.pdf,README.MAIL,sample.quiltrc}
-%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/quilt.quiltrc
+%doc AUTHORS TODO quilt.changes doc/{quilt.pdf,README,README.MAIL}
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
-%{_mandir}/man1/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/quilt.quiltrc
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/*
+%{_datadir}/%{name}
+%{_mandir}/man1/*
 
 %files -n bash-completion-quilt
 %defattr(644,root,root,755)
