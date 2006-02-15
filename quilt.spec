@@ -73,4 +73,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n bash-completion-quilt
 %defattr(644,root,root,755)
-%{_sysconfdir}/bash_completion.d/%{name}
+/etc/bash_completion.d/%{name}
