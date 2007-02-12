@@ -1,5 +1,5 @@
 Summary:	Scripts for working with series of patches
-Summary(pl.UTF-8):   Skrypty do pracy z zestawem łatek
+Summary(pl.UTF-8):	Skrypty do pracy z zestawem łatek
 Name:		quilt
 Version:	0.43
 Release:	0.1
@@ -32,7 +32,7 @@ Mortona, które można znaleźć pod adresem
 
 %package -n bash-completion-quilt
 Summary:	bash completion for quilt
-Summary(pl.UTF-8):   Dopełnienia basha dla quilt
+Summary(pl.UTF-8):	Dopełnienia basha dla quilt
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	bash-completion
