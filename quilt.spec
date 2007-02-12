@@ -1,5 +1,5 @@
 Summary:	Scripts for working with series of patches
-Summary(pl):	Skrypty do pracy z zestawem ≥atek
+Summary(pl.UTF-8):   Skrypty do pracy z zestawem ≈Çatek
 Name:		quilt
 Version:	0.43
 Release:	0.1
@@ -21,18 +21,18 @@ refreshed, etc.
 The scripts are heavily based on Andrew Morton's patch scripts found
 at <http://www.zip.com.au/~akpm/linux/patches/>.
 
-%description -l pl
-Te skrypty pozwalaj± na zarz±dzanie zestawem ≥atek poprzez ∂ledzenie
-zmian czynionych przez kaød± ≥atkÍ. £aty mog± byÊ nak≥adane,
-wycofywane, od∂wieøane itp.
+%description -l pl.UTF-8
+Te skrypty pozwalajƒÖ na zarzƒÖdzanie zestawem ≈Çatek poprzez ≈õledzenie
+zmian czynionych przez ka≈ºdƒÖ ≈Çatkƒô. ≈Åaty mogƒÖ byƒá nak≈Çadane,
+wycofywane, od≈õwie≈ºane itp.
 
-Skrypty te s± w duøej mierze oparte na skryptach do ≥at Andrew
-Mortona, ktÛre moøna znaleºÊ pod adresem
+Skrypty te sƒÖ w du≈ºej mierze oparte na skryptach do ≈Çat Andrew
+Mortona, kt√≥re mo≈ºna znale≈∫ƒá pod adresem
 <http://www.zip.com.au/~akpm/linux/patches/>.
 
 %package -n bash-completion-quilt
 Summary:	bash completion for quilt
-Summary(pl):	Dope≥nienia basha dla quilt
+Summary(pl.UTF-8):   Dope≈Çnienia basha dla quilt
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	bash-completion
@@ -40,8 +40,8 @@ Requires:	bash-completion
 %description -n bash-completion-quilt
 Bash completion for quilt.
 
-%description -n bash-completion-quilt -l pl
-Dope≥nienia basha dla quilt.
+%description -n bash-completion-quilt -l pl.UTF-8
+Dope≈Çnienia basha dla quilt.
 
 %prep
 %setup -q
