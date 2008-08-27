@@ -68,8 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/quilt.quiltrc
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/*
-%attr(755,root,root) %{_datadir}/%{name}/scripts
 %dir %{_datadir}/%{name}
+%attr(755,root,root) %{_datadir}/%{name}/scripts
 %attr(755,root,root) %{_datadir}/%{name}/add
 %attr(755,root,root) %{_datadir}/%{name}/push
 %attr(755,root,root) %{_datadir}/quilt/annotate
