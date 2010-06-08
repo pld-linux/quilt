@@ -1,16 +1,19 @@
 Summary:	Scripts for working with series of patches
 Summary(pl.UTF-8):	Skrypty do pracy z zestawem łatek
 Name:		quilt
-Version:	0.47
-Release:	0.1
-Epoch:		0
+Version:	0.48
+Release:	1
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://savannah.nongnu.org/download/quilt/%{name}-%{version}.tar.gz
-# Source0-md5:	d33d2442bd34387260b1c1db3e623af0
+# Source0-md5:	f77adda60039ffa753f3c584a286f12b
 URL:		http://savannah.nongnu.org/projects/quilt/
 BuildRequires:	gettext-devel
 BuildRequires:	perl-tools-pod
+Suggests:	diffstat
+Suggests:	diffutils
+Suggests:	find
+Suggests:	patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -63,42 +66,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS TODO quilt.changes doc/{quilt.pdf,README,README.MAIL}
+%doc AUTHORS TODO quilt.changes doc/{quilt.pdf,README{,.EMACS,.MAIL}}
 %attr(755,root,root) %{_bindir}/*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/quilt.quiltrc
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/*
-%dir %{_datadir}/%{name}
-%attr(755,root,root) %{_datadir}/%{name}/scripts
-%attr(755,root,root) %{_datadir}/%{name}/add
-%attr(755,root,root) %{_datadir}/%{name}/push
-%attr(755,root,root) %{_datadir}/quilt/annotate
-%attr(755,root,root) %{_datadir}/quilt/applied
-%attr(755,root,root) %{_datadir}/quilt/delete
-%attr(755,root,root) %{_datadir}/quilt/diff
-%attr(755,root,root) %{_datadir}/quilt/edit
-%attr(755,root,root) %{_datadir}/quilt/files
-%attr(755,root,root) %{_datadir}/quilt/fold
-%attr(755,root,root) %{_datadir}/quilt/fork
-%attr(755,root,root) %{_datadir}/quilt/graph
-%attr(755,root,root) %{_datadir}/quilt/grep
-%attr(755,root,root) %{_datadir}/quilt/header
-%attr(755,root,root) %{_datadir}/quilt/import
-%attr(755,root,root) %{_datadir}/quilt/mail
-%attr(755,root,root) %{_datadir}/quilt/new
-%attr(755,root,root) %{_datadir}/quilt/next
-%attr(755,root,root) %{_datadir}/quilt/patches
-%attr(755,root,root) %{_datadir}/quilt/pop
-%attr(755,root,root) %{_datadir}/quilt/previous
-%attr(755,root,root) %{_datadir}/quilt/refresh
-%attr(755,root,root) %{_datadir}/quilt/rename
-%attr(755,root,root) %{_datadir}/quilt/revert
-%attr(755,root,root) %{_datadir}/quilt/series
-%attr(755,root,root) %{_datadir}/quilt/setup
-%attr(755,root,root) %{_datadir}/quilt/snapshot
-%attr(755,root,root) %{_datadir}/quilt/top
-%attr(755,root,root) %{_datadir}/quilt/unapplied
-%attr(755,root,root) %{_datadir}/quilt/upgrade
+%attr(755,root,root) %{_datadir}/%{name}
 %{_mandir}/man1/*
 
 %files -n bash-completion-quilt
