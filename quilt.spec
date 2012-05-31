@@ -1,13 +1,14 @@
 Summary:	Scripts for working with series of patches
 Summary(pl.UTF-8):	Skrypty do pracy z zestawem łatek
 Name:		quilt
-Version:	0.48
+Version:	0.60
 Release:	1
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://savannah.nongnu.org/download/quilt/%{name}-%{version}.tar.gz
-# Source0-md5:	f77adda60039ffa753f3c584a286f12b
+# Source0-md5:	058a08a9b626bdec9ec8c519dc92158c
 URL:		http://savannah.nongnu.org/projects/quilt/
+BuildRequires:	diffstat
 BuildRequires:	gettext-devel
 BuildRequires:	perl-tools-pod
 Suggests:	diffstat
@@ -69,8 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS TODO quilt.changes doc/{quilt.pdf,README{,.EMACS,.MAIL}}
 %attr(755,root,root) %{_bindir}/*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/quilt.quiltrc
-%dir %{_libdir}/%{name}
-%attr(755,root,root) %{_libdir}/%{name}/*
 %attr(755,root,root) %{_datadir}/%{name}
 %{_mandir}/man1/*
 
