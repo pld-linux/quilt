@@ -13,7 +13,7 @@ URL:		http://savannah.nongnu.org/projects/quilt/
 BuildRequires:	bash >= 3.0
 BuildRequires:	diffstat >= 1.32
 BuildRequires:	diffutils >= 2.7
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	patch >= 2.5
 BuildRequires:	perl-tools-pod
 Requires:	bash >= 3.0
